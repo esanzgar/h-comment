@@ -1,0 +1,10 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+}

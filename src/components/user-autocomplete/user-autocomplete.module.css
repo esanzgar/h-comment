@@ -1,0 +1,19 @@
+.UserDropdown {
+  position: absolute;
+  z-index: 1000;
+  width: 270px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.UserAvatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.UserDropdown:not(:hover) .FocusUser {
+  z-index: 1;
+  color: #495057;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
