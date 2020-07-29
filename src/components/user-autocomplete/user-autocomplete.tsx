@@ -48,14 +48,14 @@ export const UserAutocomplete = React.memo(
       }, []);
 
       useEffect(() => {
+        setIndexFocus(0);
+
         if (!searchTerm) {
-          setIndexFocus(0);
           setUsers(initialUsers);
           return;
         }
 
         const fetch = async () => {
-          setIndexFocus(0);
           const users = await fetchUsersByNameOrUsername(searchTerm);
           setUsers(users);
         };
@@ -77,6 +77,7 @@ export const UserAutocomplete = React.memo(
 
       function selectCurrent() {
         onChange?.(users[indexFocus]);
+        setIndexFocus(0);
       }
 
       function focusNext() {
@@ -109,14 +110,18 @@ export const UserAutocomplete = React.memo(
       // TODO: add spiner while loading the users
       return (
         <div className={`card ${Styles.UserDropdown}`} style={position}>
-          {console.log(users.length, indexFocus)}
           <ul className="list-group list-group-flush" ref={ulRef}>
             {users.map((user, index) => (
               <li
                 className={`list-group-item list-group-item-action list-group-item-action py-1 btn ${
                   index === indexFocus ? Styles.FocusUser : ''
                 }`}
-                onClick={() => onChange?.(user)}
+                onClick={() => {
+                  onChange?.(user);
+                  setIndexFocus(0);
+                }}
+                // onMouseEnter={() => setIndexFocus(index)}
+                // onMouseLeave={() => setIndexFocus(0)}
                 key={user.username}
               >
                 <div className="media">
