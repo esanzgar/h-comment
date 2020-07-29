@@ -84,6 +84,7 @@ export const TextareaMentions = memo(
         setShow(false);
         setSearchTerm(undefined);
       }
+      (ref as React.MutableRefObject<HTMLTextAreaElement>).current?.focus();
     };
 
     const onMentionUser = (user: User) => {
@@ -91,6 +92,7 @@ export const TextareaMentions = memo(
         return;
       }
       onMention?.(user, replacePosition);
+      (ref as React.MutableRefObject<HTMLTextAreaElement>).current?.focus();
 
       setSearchTerm(undefined);
       setShow(false);
