@@ -2,6 +2,7 @@
   "name": "h-comments",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://esanzgar.github.io/h-comment/",
   "dependencies": {
     "@types/textarea-caret": "^3.0.0",
     "axios": "^0.19.2",

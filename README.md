@@ -1,6 +1,6 @@
 # h-comment
 
-React application to demo user autocomplete. [Demo here](https://esanzgar.github.io/h-comment/).
+A React application that features a user autocomplete. [Demo here](https://esanzgar.github.io/h-comment/).
 
 ## Installation and running the app
 
