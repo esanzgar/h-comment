@@ -36,3 +36,4 @@ Things that don't work yet (I haven't had the time):
 - positioning the dropdown-autocomplete when it is too close to the window or 'parent' boundaries
 - issue when dropdown-autocompletes appears on the same spot as the mouse was last time
 - testing is minimal
+- it is not possible to search with multiple words (e.g. 'Amanda Lewis')
