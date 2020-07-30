@@ -34,4 +34,5 @@ Things that don't work yet (I haven't had the time):
 
 - adding a mention when the content is scrolled in the textarea
 - positioning the dropdown-autocomplete when it is too close to the window or 'parent' boundaries
-- I sometime experienced issues moving up and down on the dropdown-autocomplete.
+- issue when dropdown-autocompletes appears on the same spot as the mouse was last time
+- testing is minimal
